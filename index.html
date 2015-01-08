@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="expressionevaluator.js"></script>
+		<script>
+			
+			var expression = 'sin(pi / 2) - 1 + (2 * 2)';
+
+			window.onload = function() {
+				var result = ExpressionEvaluator.evaluate(expression);
+				document.getElementById('expression').innerHTML = expression;
+				document.getElementById('answer').innerHTML = (result.success)? result.answer : result.msg;
+			};
+
+		</script>
+	</head>
+	<body>
+		<span id="expression"></span> = <span id="answer"></span>
+	</body>
+</html>
